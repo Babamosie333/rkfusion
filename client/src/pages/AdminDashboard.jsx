@@ -22,7 +22,7 @@ const AdminDashboard = () => {
     setLoading(true);
     api
       .get("/media")
-      .then((res) => setMedia(res.data))
+      .then((res) => setMedia(Array.isArray(res.data) ? res.data : []))
       .finally(() => setLoading(false));
   };
 

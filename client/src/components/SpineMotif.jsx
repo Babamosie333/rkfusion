@@ -70,6 +70,7 @@ const SpineMotif = ({ className = "", tone = "ink" }) => {
       <motion.circle
         r="4"
         fill={dotColor}
+        initial={{ cx: cxKeyframes[0], cy: cyKeyframes[0] }}
         animate={{ cx: cxKeyframes, cy: cyKeyframes }}
         transition={{
           duration: 7,

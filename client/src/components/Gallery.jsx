@@ -26,12 +26,14 @@ const Gallery = () => {
   useEffect(() => {
     api
       .get("/media")
-      .then((res) => setMedia(res.data))
+      .then((res) => setMedia(Array.isArray(res.data) ? res.data : []))
       .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
 
-  const visible = media.filter((m) => filter === "all" || m.category === filter);
+  const visible = Array.isArray(media)
+    ? media.filter((m) => filter === "all" || m.category === filter)
+    : [];
 
   return (
     <section id="gallery" className="relative py-28 bg-linen">
