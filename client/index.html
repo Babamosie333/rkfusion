@@ -3,33 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RK Fusion Chiropractic Yog Centre</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1E3A34" />
+
+    <title>RK Fusion Chiropractic Yog Centre | Chiropractic Care &amp; Therapeutic Yoga</title>
     <meta
       name="description"
-      content="RK Fusion Chiropractic Yog Centre — where spinal alignment meets the practice of yoga. Book a consultation today."
+      content="RK Fusion Chiropractic Yog Centre combines precise chiropractic adjustment with therapeutic yoga to correct posture, relieve back pain, and restore long-term mobility. Book a consultation today."
     />
-    <!-- Open Graph Meta Tags -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="RK Fusion Chiropractic Yog Centre | Vikram Singh" />
-        <meta property="og:description" content="RK Fusion Chiropractic Yog Centre — where spinal alignment meets the practice of yoga. Book a consultation today."/>
-        <meta property="og:image" content="https://rkfusion.vercel.app/og.jpg" />
-        <meta property="og:url" content="https://rkfusion.vercel.app" />
-        <meta property="og:site_name" content="Vikram Singh Portfolio Projects" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
 
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="RK Fusion Chiropractic Yog Centre | Vikram Singh" />
-        <meta name="twitter:description" content="RK Fusion Chiropractic Yog Centre — where spinal alignment meets the practice of yoga. Book a consultation today."/>
-        <meta name="twitter:image" content="https://rkfusion.vercel.app/og.jpg" />
+    <!-- Open Graph - controls how the link looks when shared on WhatsApp, Facebook, etc. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:site_name" content="RK Fusion Chiropractic Yog Centre" />
+    <meta property="og:title" content="RK Fusion Chiropractic Yog Centre | Chiropractic Care & Therapeutic Yoga" />
+    <meta
+      property="og:description"
+      content="Spinal alignment meets the practice of yoga. Manual chiropractic adjustment paired with guided yoga therapy, built around what your spine actually needs."
+    />
+    <meta property="og:image" content="%VITE_SITE_URL%/og.jpg" />
+    <meta property="og:locale" content="en_IN" />
 
-        <!-- Author -->
-        <meta name="author" content="Vikram Singh" />
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RK Fusion Chiropractic Yog Centre" />
+    <meta
+      name="twitter:description"
+      content="Spinal alignment meets the practice of yoga — chiropractic care and therapeutic yoga under one roof."
+    />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/client/public/favicon.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Structured data - helps Google understand this as a real local business
+         (chiropractic clinic + yoga studio) and can power rich results like
+         Maps listings, opening hours, and review stars. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["Chiropractic", "ExerciseGym"],
+        "name": "RK Fusion Chiropractic Yog Centre",
+        "description": "Chiropractic care and therapeutic yoga combined under one practice.",
+        "url": "%VITE_SITE_URL%/",
+        "telephone": "+91XXXXXXXXXX",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Update with your real street address",
+          "addressLocality": "Update with your city",
+          "addressRegion": "Update with your state",
+          "postalCode": "000000",
+          "addressCountry": "IN"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "07:00",
+            "closes": "20:00"
+          }
+        ],
+        "sameAs": []
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

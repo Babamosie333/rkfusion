@@ -1,0 +1,9 @@
+# Replace YOUR_DOMAIN below with your real live domain once you have one,
+# and update the Disallow line if you change VITE_ADMIN_PATH in client/.env
+# (this file is static and can't read that env variable automatically).
+
+User-agent: *
+Allow: /
+Disallow: /rktinku
+
+Sitemap: https://rk-fusion.vercel.app/sitemap.xml

@@ -84,6 +84,7 @@ npm run dev
 | `VITE_API_URL` | `http://localhost:5000/api` locally; your live server URL + `/api` in production |
 | `VITE_WHATSAPP_NUMBER` | Your number, international format, digits only, no `+` |
 | `VITE_ADMIN_PATH` | A private path only you know, e.g. `/rk-portal-7x2k` — change this before deploying |
+| `VITE_SITE_URL` | Your real live domain, no trailing slash — used in SEO tags only |
 
 Visit `http://localhost:5173` for the public site, and
 `http://localhost:5173<VITE_ADMIN_PATH>/login` for the dashboard.
@@ -123,10 +124,35 @@ later, trigger a new deployment for it to take effect.
 
 - `client/src/components/Contact.jsx` — studio address and hours (currently placeholders)
 - `client/src/components/Hero.jsx` / `About.jsx` — headline and philosophy copy
-- `client/index.html` — page title/description
 - Upload real photos/videos from the admin dashboard — the gallery shows a friendly empty state until you do
 
-## 6. Keeping the admin panel private
+## 6. SEO setup
+
+The site ships with a meta title/description, Open Graph + Twitter share
+previews, a `Chiropractic`/`ExerciseGym` structured data block (helps Google
+understand it as a real local business — opening hours, address, etc.), a
+favicon, `robots.txt`, and `sitemap.xml`. A few things still need your real
+details:
+
+- Set `VITE_SITE_URL` (see table above) to your actual domain once you have
+  one — it's used for the canonical link and all the share-preview tags.
+- `client/index.html` — the JSON-LD block near the bottom of `<head>` has
+  placeholder phone number and address; update both to match
+  `Contact.jsx` so the two stay consistent.
+- Add a real `og-image.jpg` (1200×630px, a clear studio/team photo works
+  well) to `client/public/` — this is what shows up as the preview image
+  when the link is shared on WhatsApp, Facebook, etc. There's a placeholder
+  reference to it in `index.html` already.
+- `client/public/robots.txt` and `client/public/sitemap.xml` — replace
+  `YOUR_DOMAIN` with your real domain in both files.
+- Once live, submit the site in Google Search Console (free) and paste in
+  your `sitemap.xml` URL — this is what actually gets you indexed quickly,
+  rather than waiting for Google to find it on its own.
+
+This is a single scrolling page, so there's only one URL to optimize — no
+per-page meta tags to manage.
+
+## 7. Keeping the admin panel private
 
 - The dashboard route is never linked from the public site — there's no
   button or link pointing to it anywhere.

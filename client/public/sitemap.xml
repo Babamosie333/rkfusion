@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR_DOMAIN below with your real live domain.
+     This is a single-page site, so there's only one URL to list - the
+     admin dashboard is deliberately left out of both this file and robots.txt
+     blocking is just an extra layer; it was already unlinked and login-protected. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://rkfusion.vercel.app</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
